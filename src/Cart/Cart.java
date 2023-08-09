@@ -7,7 +7,9 @@ public class Cart {
 
   private final List<ProductCart> listaProducts = new ArrayList<>();
 
-  public List<ProductCart> getListaProducts() {return listaProducts;}
+  public void getListaProducts() {
+    for (ProductCart product : listaProducts) product.information();
+  }
 
   public void buy(String name, int quantity, float priceUnit) {
     for (ProductCart prodcut : listaProducts) {
@@ -18,7 +20,9 @@ public class Cart {
     }
   }
 
-  public void removeProduct(int numberProduct) {listaProducts.remove(numberProduct - 1);}
+  public void removeProduct(int numberProduct) {
+    listaProducts.remove(numberProduct - 1);
+  }
 
   public void alterQuantity(int numberProduct, int quantity) {
     ProductCart product = listaProducts.get(numberProduct - 1);
