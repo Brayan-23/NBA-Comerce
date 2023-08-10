@@ -24,9 +24,8 @@ public class ProductCart {
   public void information() {
     System.out.println("Produto: " + name);
     System.out.println("Quanridade: " + quantity);
-    System.out.printf("Price Unitário:%.2f R$", priceUnit);
-    System.out.printf("Preço Total:%.2f R$", totalPrice);
-
+    System.out.printf("Price Unitário: R$%.2f\n", priceUnit);
+    System.out.printf("Preço Total: R$%.2f\n", totalPrice);
   }
 
   public void newQtd(int quantity) {
