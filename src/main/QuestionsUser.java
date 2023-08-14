@@ -60,25 +60,17 @@ public class QuestionsUser {
     String color = scanner.next();
     System.out.println("Digite o novo preço do produto:");
     String price = scanner.next();
-    System.out.println("Deseja alterar os tamanhos padrões?");
+    System.out.println("Deseja alterar os tamanhos padrões?(S/N)");
     String trueOrNot = scanner.next();
-    String add = "";
-    String remove = "";
+    String numberAddOrNot = "0";
     String addOrRemove = "";
-    if (trueOrNot.equals("Sim")) {
-      System.out.println("Deseja adicionar ou remover algum tamanho?");
+    if (trueOrNot.equalsIgnoreCase("s")) {
+      System.out.println("Deseja adicionar ou remover algum tamanho?(ADD/REM)");
       addOrRemove = scanner.next();
-      if (addOrRemove.equals("true")) {
-        System.out.println("Digite o valor a ser inserido:");
-        add = scanner.next();
-        System.out.println("Adicionado com Sucesso");
-      } else {
-        System.out.println("Digite o valor a ser inserido:");
-        remove = scanner.next();
-        System.out.println("Removido com Sucesso");
-      }
+      System.out.println("Digite a Medida:");
+      numberAddOrNot = scanner.next();
     }
-    return new String[]{alter, name, color, price, add, remove, addOrRemove};
+    return new String[]{alter, name, color, price, numberAddOrNot, addOrRemove};
   }
 
   public int removeProductSaleAdm() {
@@ -88,7 +80,8 @@ public class QuestionsUser {
 
   public int alterOrNotUser(){
     System.out.println("1 - Alterar");
-    System.out.println("2 - Sair");
+    System.out.println("2 - Remover");
+    System.out.println("3 - Sair");
     return scanner.nextInt();
   }
 
@@ -108,5 +101,9 @@ public class QuestionsUser {
     return new int[]{updated, newQauntity};
   }
 
+  public int removeProductUser(){
+    System.out.println("Digite o número do Produto que deseja remover:");
+    return scanner.nextInt();
+  }
 
 }

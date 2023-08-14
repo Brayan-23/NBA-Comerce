@@ -21,7 +21,7 @@ public class Tennis extends Clothing {
   public void information() {
     System.out.println("Nome: " + name);
     System.out.println("Color: " + color);
-    System.out.printf("Price:%.2f ", price);
+    System.out.printf("Price: R$%.2f ", price);
     System.out.println("Tamanhos Disponíveis: "+ sizes);
   }
 

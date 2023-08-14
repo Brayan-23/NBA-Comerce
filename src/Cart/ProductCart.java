@@ -17,14 +17,16 @@ public class ProductCart {
     return quantity;
   }
 
+  public float getTotalPrice() {return  totalPrice;}
+
   public String getName() {
     return name;
   }
 
   public void information() {
     System.out.println("Produto: " + name);
-    System.out.println("Quanridade: " + quantity);
-    System.out.printf("Price Unitário: R$%.2f\n", priceUnit);
+    System.out.println("Quantidade: " + quantity);
+    System.out.printf("Preço Unitário: R$%.2f\n", priceUnit);
     System.out.printf("Preço Total: R$%.2f\n", totalPrice);
   }
 

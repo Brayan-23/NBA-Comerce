@@ -23,7 +23,7 @@ public class Pants extends Clothing {
   public void information() {
     System.out.println("Produto: " + name);
     System.out.println("Cor: " + color);
-    System.out.printf("Price:%.2f ", price);
+    System.out.printf("Price: R$%.2f ", price);
     System.out.println("Tamanhos Disponíveis: " + sizes);
   }
 

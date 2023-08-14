@@ -35,10 +35,11 @@ public class Menu {
       cart.buy(product.getName(), chosenProdcut[1], product.getPrice());
     } else if (menu == 2) {
       cart.getListaProducts();
-      if (questions.alterOrNotUser() == 1) {
+      int alterOrNotUser = questions.alterOrNotUser();
+      if (alterOrNotUser == 1) {
         int[] alterProduct = questions.alterProductUser();
         cart.alterQuantity(alterProduct[0], alterProduct[1]);
-      }
+      } else if (alterOrNotUser == 2) cart.removeProduct(questions.removeProductUser() - 1);
     } else return false;
     return true;
   }
@@ -53,10 +54,10 @@ public class Menu {
       ProductSales.read();
       String[] infoAlterProduct = questions.alterProductSaleAdm();
       ProductSales.updated(Integer.parseInt(infoAlterProduct[0]), infoAlterProduct[1], infoAlterProduct[2],
-          Float.parseFloat(infoAlterProduct[3]), new int[]{Integer.parseInt(infoAlterProduct[4], Integer.parseInt(infoAlterProduct[5]))},
-          Boolean.parseBoolean(infoAlterProduct[6]));
+          Float.parseFloat(infoAlterProduct[3]), Integer.parseInt(infoAlterProduct[4]), infoAlterProduct[5]);
       System.out.println("Produto alterado com Sucesso");
     } else if (menu == 3) {
+      ProductSales.read();
       ProductSales.delete(questions.removeProductSaleAdm());
       System.out.println("Produto removido com Sucesso");
     } else return false;
