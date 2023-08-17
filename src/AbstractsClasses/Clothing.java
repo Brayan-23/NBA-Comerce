@@ -4,7 +4,9 @@ import java.util.Set;
 
 public abstract class Clothing {
   protected String name;
-  protected String color;
+  protected String team;
+
+  protected String type;
   protected float price;
 
   public abstract void information();
@@ -20,7 +22,7 @@ public abstract class Clothing {
 
   public abstract void setName(String name);
 
-  public abstract void setColor(String color);
+  public abstract void setTeam(String team);
 
   public abstract void setPrice(float price);
 

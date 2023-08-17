@@ -11,16 +11,18 @@ public class Tennis extends Clothing {
   );
 
 
-  public Tennis(String name, String color, float price) {
-    this.name = name;
+  public Tennis(String namePlayer, String team, float price) {
+    this.name = namePlayer;
     this.price = price;
-    this.color = color;
+    this.team = team;
+    this.type = "Tênis";
   }
 
   @Override
   public void information() {
-    System.out.println("Nome: " + name);
-    System.out.println("Color: " + color);
+    System.out.println("Nome do Jogador: " + name + " \uD83C\uDFC0");
+    System.out.println("Tipo: " + type + " \uD83D\uDC5F");
+    System.out.println("Equipe: " + team);
     System.out.printf("Price: R$%.2f ", price);
     System.out.println("Tamanhos Disponíveis: "+ sizes);
   }
@@ -46,8 +48,8 @@ public class Tennis extends Clothing {
   }
 
   @Override
-  public void setColor(String color) {
-    this.color = color;
+  public void setTeam(String team) {
+    this.team = team;
   }
 
   @Override

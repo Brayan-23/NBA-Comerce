@@ -1,6 +1,6 @@
 package main;
 
-import java.util.Scanner;
+import java.awt.*;
 
 public class Principal {
 

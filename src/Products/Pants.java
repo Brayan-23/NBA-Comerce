@@ -14,15 +14,17 @@ public class Pants extends Clothing {
   );
 
 
-  public Pants(String name, String color, float price) {
-    this.name = name;
+  public Pants(String namePlayer, String team, float price) {
+    this.name = namePlayer;
     this.price = price;
-    this.color = color;
+    this.team = team;
+    this.type = "Calça";
   }
 
   public void information() {
-    System.out.println("Produto: " + name);
-    System.out.println("Cor: " + color);
+    System.out.println("Nome do Jogador: " + name + " \uD83C\uDFC0");
+    System.out.println("Tipo: " + type + " \uD83D\uDC56");
+    System.out.println("Equipe: " + team);
     System.out.printf("Price: R$%.2f ", price);
     System.out.println("Tamanhos Disponíveis: " + sizes);
   }
@@ -47,8 +49,8 @@ public class Pants extends Clothing {
   }
 
   @Override
-  public void setColor(String color) {
-    this.color = color;
+  public void setTeam(String team) {
+    this.team = team;
   }
 
   @Override

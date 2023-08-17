@@ -2,6 +2,7 @@ package Products;
 
 
 import AbstractsClasses.Clothing;
+import utils.Colors;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,10 +10,10 @@ import java.util.List;
 public class ProductSales {
 
   private static final List<Clothing> sales = new ArrayList<>(
-      List.of(new Pants("Jeans", "black", 100),
-          new Shorts("Tommy", "white", 90),
-          new Tennis("Nike", "white", 200),
-          new TShirt("Polo", "black", 50))
+      List.of(new Pants("LeBron-James", "Lakers", 100),
+          new Shorts("Jason-Tatum", "Celtics", 90),
+          new Tennis("Paul-George", "Clippers", 200),
+          new TShirt("Stephen-Curry", "Warriors", 50))
   );
 
 
@@ -24,13 +25,12 @@ public class ProductSales {
       case 4 -> sales.add(new TShirt(name, color, price));
       default -> System.out.println("Erro");
     }
-    System.out.println("Criado");
   }
 
   public static void read() {
     int contador = 1;
     for (Clothing product : sales) {
-      System.out.print(contador + ": ");
+      System.out.print(Colors.TEXT_CYAN_BOLD_BRIGHT + contador + ": ");
       product.information();
       System.out.println("---------------------------------");
       contador++;
@@ -41,10 +41,10 @@ public class ProductSales {
     return sales.get(sale - 1);
   }
 
-  public static void updated(int numberProduct, String name, String color, float price, int size, String addOrNot){
+  public static void updated(int numberProduct, String name, String team, float price, int size, String addOrNot){
     Clothing product = sales.get(numberProduct - 1);
     product.setName(name);
-    product.setColor(color);
+    product.setTeam(team);
     product.setPrice(price);
     addOrRemoveSize(product, size, addOrNot);
   }
