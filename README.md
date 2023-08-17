@@ -31,8 +31,6 @@ $ git@github.com:Brayan-23/NBA-Comerce.git
 
 #### ⚠️ OBS: A versão da JDK utilizada é a 17.
 
-
-
 ## 💻 Desenvolvedor
 
 <a href="https://www.linkedin.com/in/braka/">Brayan Santos</a>
